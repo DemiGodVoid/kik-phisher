@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Verification</title>
+    <style>
+        body {
+            background-color: #ffffff; /* white background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #f0f0f0; /* gray box */
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .verification-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .square-box {
+            width: 30px;
+            height: 30px;
+            background-color: #3498db; /* blue color for the small square box */
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .verification-text {
+            font-size: 14px;
+        }
+        img[alt="www.000webhost.com"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="verification-container">
+            <div class="square-box" onclick="redirectToChatroom()"></div>
+            <p class="verification-text">Verify You are human.</p>
+        </div>
+    </div>
+
+    <script>
+        function redirectToChatroom() {
+            window.location.href = 'chatroom.html';
+        }
+    </script>
+</body>
+</html>

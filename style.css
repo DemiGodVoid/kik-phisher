@@ -1,0 +1,14 @@
+/* styles.css */
+.button {
+    background-color: #007BFF; /* Change to your desired background color */
+    color: #ffffff; /* Change to your desired text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px; /* Change to your desired font size */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Change to a different color on hover */
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; /* Added to align items vertically */
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+    }
+
+    .loading-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 10px; /* Added margin to create space between loading text and error text */
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      animation: dotAnimation 1.5s infinite;
+      opacity: 0;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .dot:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes dotAnimation {
+      0%, 20%, 80%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      50% {
+        transform: scale(1.5);
+        opacity: 1;
+      }
+    }
+
+    /* Hide the image with alt attribute "www.000webhost.com" */
+    img[alt="www.000webhost.com"] {
+      display: none;
+    }
+
+    .error-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- The image with alt attribute "www.000webhost.com" will be hidden -->
+  <img src="example.jpg" alt="www.000webhost.com">
+
+  <div class="loading-text">Loading Chats <span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+
+  <script>
+    setTimeout(function() {
+      var errorText = document.createElement("div");
+      errorText.innerHTML = "Hmm, Seems to be taking awhile. Make sure you entered your username or password correctly.";
+      errorText.className = "error-text";
+      document.body.appendChild(errorText);
+    }, 10000);
+  </script>
+</body>
+</html>
